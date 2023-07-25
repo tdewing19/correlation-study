@@ -15,7 +15,7 @@ It's also important to make sure there are no NA or missing values in your conti
 
 ```{r}
 # Read in data set
-df <- read.csv("CA WFC_ Legislative Support - updated by Luis Garcia Chavez 05_04 - Assemblymembers.csv", header = TRUE, skip = 1)
+df <- read.csv("CA WFC_ Legislative Support - Assemblymembers.csv", header = TRUE, skip = 1)
 
 # Create contingency table
 tab <- table(df$SB.114..enacted..COVID.19.SPSL..Chamber.opposed., df$AB.123..vetoed..increase.PFL...SDI.to.90...no.funding.mechanism...CA.WFC.top.priority.Chamber.no.position..)[2:4,2:4]
