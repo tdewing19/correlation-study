@@ -10,11 +10,11 @@
 # For this case, I removed all instances where the value was empty.
 
 # Read in data set
-df <- read.csv("CA WFC_ Legislative Support - updated by Luis Garcia Chavez 05_04 - 
-               Assemblymembers.csv", header = TRUE, skip = 1)
+df <- read.csv("CA WFC_ Legislative Support - Assemblymembers.csv", header = TRUE, skip = 1)
 
 # Create contingency table
-tab <- table(df$SB.114..enacted..COVID.19.SPSL..Chamber.opposed., df$AB.123..vetoed..increase.PFL...SDI.to.90...no.funding.mechanism...CA.WFC.top.priority.Chamber.no.position..)[2:4,2:4]
+tab <- table(df$SB.114..enacted..COVID.19.SPSL..Chamber.opposed., 
+             df$AB.123..vetoed..increase.PFL...SDI.to.90...no.funding.mechanism...CA.WFC.top.priority.Chamber.no.position..)[2:4,2:4]
 tab
 
   
@@ -24,7 +24,8 @@ tab
 # test of independence. This is a statistical hypothesis test that uses a contingency table to 
 # determine if two categorical variables are independent or dependent. Using the `chisq` function, 
 # we can run the chi-square test of independence on our contingency table. If the calculated p-value
-# is below 0.05, we can conclude that the two variables of interest have are associated with each other. On the other hand, if the p-value is greater than 0.05, we can conclude that the two variables are independent.
+# is below 0.05, we can conclude that the two variables of interest have are associated with each other. 
+# On the other hand, if the p-value is greater than 0.05, we can conclude that the two variables are independent.
 
 # Run chi-square test of independence
 chisq <- chisq.test(tab)
